@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('reset.css');
+
+
+
+:root{
+    --clr-Cyan: hsl(179, 62%, 43%);
+    --clr-Bright-Yellow: hsl(71, 73%, 54%);
+    --clr-Light-Gray: hsl(204, 43%, 93%);
+    --clr-Grayish-Blue: hsl(218, 22%, 67%);
+
+    --fw-b:700;
+    --padding: 2rem;
+}
+
+body{
+    font-family: "Karla", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    height: max(800px, 100vh);
+    background-color: var(--clr-Light-Gray);
+}
+
+.container{
+    width: clamp(44.44%, 600px,  90%);
+    height: clamp(60%, 480px, 90%);
+    margin: 20% auto 0;
+    display: grid;
+    grid-template-rows: 45.83% 54.17%;
+}
+
+.top_part > *, .bottom_part > *{
+    padding-left: var(--padding);
+    padding-top: var(--padding);
+}
+
+.top_part{
+    background-color: white;
+    min-height: 220px;
+}
+
+h1{
+    font-size: 1.5rem;
+    color: var(--clr-Cyan);
+    margin-bottom: -1rem;
+    font-weight: var(--fw-b);
+}
+
+#days{
+    color: var(--clr-Bright-Yellow);
+    font-size: 1.1rem;
+    margin-bottom: -1.5rem;
+    font-weight: var(--fw-b);
+}
+
+#access{
+    max-width: 85%;
+    color: var(--clr-Grayish-Blue);
+}
+
+.bottom_part{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: var(--clr-Light-Gray);
+    max-height: 260px;
+}
+
+.left_part{
+    background-color: var(--clr-Cyan);
+    display: grid;
+}
+
+.right_part{
+    background-color: rgb(64, 216, 216);
+}
+
+.subtitle{
+    color: white;
+    font-size: 1.15rem;
+}
+
+.detail{    
+    display: flex;
+    align-items: center;
+    margin-top: -3rem
+}
+
+#price{    
+    font-size: 2rem;
+    font-weight: var(--fw-b);
+    color: white;
+    padding-right: 1rem;    
+}
+
+#daily{
+    margin-top: -1rem;
+}
+
+#sign{
+    width: 80%;
+    height: 2.5rem;
+    background-color: var(--clr-Bright-Yellow);
+    border-radius: 0.5rem;
+    border: none;
+    box-shadow: 0 0.1rem 0.1rem gray;
+    color:white;
+    font-weight: var(--fw-b);    
+}
+
+h2{
+    margin-bottom: 1rem;
+}
+
+ul{
+    margin-bottom: 1.5rem;
+    margin-left: -2.5rem;
+}
+
+ul > li{
+    list-style: none; line-height: auto;
+    font-size: 0.9rem;
+}
+
+@media (width < 600px){
+    body{
+        font-size: 13px;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin: 6rem auto;
+    }
+    .bottom_part{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        max-height: none;
+    }
+    .left_part{
+        min-height: 16rem;
+    }
+    .right_part{
+        margin-bottom: 6rem;
+    }
+    #access{
+        margin-bottom: 2rem;
+    }
+}
+
+    .attribution { 
+        font-size: 11px; text-align: center; 
+        position: fixed; bottom: 0;right: 0;
+    }
+    .attribution a { 
+        color: hsl(228, 45%, 44%); 
+    }
